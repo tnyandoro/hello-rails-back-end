@@ -1,0 +1,807 @@
+  [1m[35m (2795.5ms)[0m  [1m[35mCREATE DATABASE "hello_rails_back_end_development" ENCODING = 'unicode'[0m
+  [1m[35m (2083.6ms)[0m  [1m[35mCREATE DATABASE "hello_rails_back_end_test" ENCODING = 'unicode'[0m
+  [1m[35m (29.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3369180297042482685)[0m
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMessage (20211015151348)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.1ms)[0m  [1m[35mCREATE TABLE "messages" ("id" bigserial primary key, "greeting" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211015151348"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-15 15:14:23.239568"], ["updated_at", "2021-10-15 15:14:23.239568"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3369180297042482685)[0m
+  [1m[35m (16.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (15.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3369180297042482685)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (14.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3369180297042482685)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3369180297042482685)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3369180297042482685)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3369180297042482685)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(3369180297042482685)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (168.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hello_rails_back_end_development"[0m
+  [1m[35m (173.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hello_rails_back_end_test"[0m
+  [1m[35m (2807.5ms)[0m  [1m[35mCREATE DATABASE "hello_rails_back_end_development" ENCODING = 'unicode'[0m
+  [1m[35m (2057.6ms)[0m  [1m[35mCREATE DATABASE "hello_rails_back_end_test" ENCODING = 'unicode'[0m
+  [1m[35m (22.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3369180297042482685)[0m
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGreetings (20211015222601)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "greetings" ("id" bigserial primary key, "message" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211015222601"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-15 22:28:52.366158"], ["updated_at", "2021-10-15 22:28:52.366158"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3369180297042482685)[0m
+  [1m[35m (12.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (12.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3369180297042482685)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGreetings (20211015222601)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.5ms)[0m  [1m[35mDROP TABLE "greetings"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20211015222601"]]
+  [1m[36mTRANSACTION (36.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3369180297042482685)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3369180297042482685)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3369180297042482685)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3369180297042482685)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMessages (20211015223714)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (64.4ms)[0m  [1m[35mCREATE TABLE "messages" ("id" bigserial primary key, "greeting" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211015223714"]]
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (14.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3369180297042482685)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (9.3ms)[0m  [1m[32mINSERT INTO "messages" ("id", "greeting", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["id", 1], ["greeting", "Howzit buddy"], ["created_at", "2021-10-15 22:38:24.102468"], ["updated_at", "2021-10-15 22:38:24.102468"]]
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("id", "greeting", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["id", 2], ["greeting", "Titambire"], ["created_at", "2021-10-15 22:38:24.123469"], ["updated_at", "2021-10-15 22:38:24.123469"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("id", "greeting", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["id", 3], ["greeting", "Share a smile today will be a great day"], ["created_at", "2021-10-15 22:38:24.128537"], ["updated_at", "2021-10-15 22:38:24.128537"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("id", "greeting", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["id", 4], ["greeting", "Today is great day"], ["created_at", "2021-10-15 22:38:24.134039"], ["updated_at", "2021-10-15 22:38:24.134039"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("id", "greeting", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["id", 5], ["greeting", "You are looking great to day friend"], ["created_at", "2021-10-15 22:38:24.138259"], ["updated_at", "2021-10-15 22:38:24.138259"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("id", "greeting", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["id", 6], ["greeting", "Hey hows your day"], ["created_at", "2021-10-15 22:38:24.142513"], ["updated_at", "2021-10-15 22:38:24.142513"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMessage Load (8.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages"[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMessage Load (9.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2021-10-16 02:46:37 +0200
+  [1m[35m (13.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+Completed 204 No Content in 89ms (ActiveRecord: 0.0ms | Allocations: 2688)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-16 02:46:46 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-16 02:47:08 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/" for ::1 at 2021-10-16 02:47:34 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-10-16 02:47:45 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/" for ::1 at 2021-10-16 02:48:03 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-10-16 02:48:13 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-10-16 02:48:43 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-10-16 02:50:09 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-16 02:50:35 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 02:51:01 +0200
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6:in `index'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 5.0ms | Allocations: 3812)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-10-16 02:51:01 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 27)
+
+
+Started GET "/api/v1/messages.json" for ::1 at 2021-10-16 02:57:10 +0200
+Processing by Api::V1::MessagesController#index as JSON
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6:in `index'
+Completed 200 OK in 40ms (Views: 0.2ms | ActiveRecord: 12.7ms | Allocations: 2948)
+
+
+Started GET "/api/v1/messages/greetings" for ::1 at 2021-10-16 02:59:58 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"api/v1/messages/greetings"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 28)
+
+
+Started GET "/api/v1/messages/greetings" for ::1 at 2021-10-16 03:00:03 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"api/v1/messages/greetings"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 28)
+
+
+Started GET "/api/v1/messages.json" for ::1 at 2021-10-16 03:00:16 +0200
+Processing by Api::V1::MessagesController#index as JSON
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 898)
+
+
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 03:05:05 +0200
+Processing by Api::V1::MessagesController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 127)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: message
+Did you mean?  controller
+               action):
+  
+app/controllers/api/v1/messages_controller.rb:41:in `message_params'
+app/controllers/api/v1/messages_controller.rb:15:in `create'
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 03:07:13 +0200
+  
+NoMethodError (undefined method `protect_from_forgery' for Api::V1::MessagesController:Class):
+  
+app/controllers/api/v1/messages_controller.rb:4:in `<class:MessagesController>'
+app/controllers/api/v1/messages_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/messages_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/messages_controller.rb:1:in `<main>'
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 03:10:02 +0200
+  
+NoMethodError (undefined method `protect_from_forgery' for Api::V1::MessagesController:Class):
+  
+app/controllers/api/v1/messages_controller.rb:4:in `<class:MessagesController>'
+app/controllers/api/v1/messages_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/messages_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/messages_controller.rb:1:in `<main>'
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 03:10:28 +0200
+  
+NoMethodError (undefined method `protect_from_forgery' for Api::V1::MessagesController:Class):
+  
+app/controllers/api/v1/messages_controller.rb:4:in `<class:MessagesController>'
+app/controllers/api/v1/messages_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/messages_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/messages_controller.rb:1:in `<main>'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"d9d53280-2e1d-11ec-8a57-b948e33e08fd"
+	"greeting": "hesi kani"
+}
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 03:11:39 +0200
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NoMethodError (undefined method `protect_from_forgery' for Api::V1::MessagesController:Class):
+  
+app/controllers/api/v1/messages_controller.rb:4:in `<class:MessagesController>'
+app/controllers/api/v1/messages_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/messages_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/messages_controller.rb:1:in `<main>'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"03ee7ae0-2e1e-11ec-8a57-b948e33e08fd"
+	"greeting": "hesi kani"
+}
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 03:12:52 +0200
+  
+NoMethodError (undefined method `protect_from_forgery' for Api::V1::MessagesController:Class):
+  
+app/controllers/api/v1/messages_controller.rb:4:in `<class:MessagesController>'
+app/controllers/api/v1/messages_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/messages_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/messages_controller.rb:1:in `<main>'
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 03:13:01 +0200
+  
+NoMethodError (undefined method `protect_from_forgery' for Api::V1::MessagesController:Class):
+  
+app/controllers/api/v1/messages_controller.rb:4:in `<class:MessagesController>'
+app/controllers/api/v1/messages_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/messages_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/messages_controller.rb:1:in `<main>'
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 03:14:21 +0200
+  
+NoMethodError (undefined method `protect_from_forgery' for Api::V1::MessagesController:Class):
+  
+app/controllers/api/v1/messages_controller.rb:4:in `<class:MessagesController>'
+app/controllers/api/v1/messages_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/messages_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/messages_controller.rb:1:in `<main>'
+Started GET "/api/v1/messages.json" for ::1 at 2021-10-16 13:26:02 +0200
+  
+NoMethodError (undefined method `protect_from_forgery' for Api::V1::MessagesController:Class):
+  
+app/controllers/api/v1/messages_controller.rb:4:in `<class:MessagesController>'
+app/controllers/api/v1/messages_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/messages_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/messages_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2021-10-16 13:27:07 +0200
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+Completed 204 No Content in 10ms (ActiveRecord: 0.0ms | Allocations: 1855)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 13:27:21 +0200
+  
+NoMethodError (undefined method `protect_from_forgery' for Api::V1::MessagesController:Class):
+  
+app/controllers/api/v1/messages_controller.rb:4:in `<class:MessagesController>'
+app/controllers/api/v1/messages_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/messages_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/messages_controller.rb:1:in `<main>'
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-10-16 13:27:22 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 13:27:39 +0200
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (1.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 0.2ms | ActiveRecord: 14.6ms | Allocations: 3851)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-10-16 13:27:40 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 32)
+
+
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 13:27:54 +0200
+Processing by Api::V1::MessagesController#create as */*
+  Parameters: {"id"=>"7", "greeting"=>"hesi kani", "message"=>{"id"=>"7", "greeting"=>"hesi kani"}}
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:18:in `create'
+  [1m[36mMessage Create (3.4ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "hesi kani"], ["created_at", "2021-10-16 11:27:54.727980"], ["updated_at", "2021-10-16 11:27:54.727980"]]
+  ↳ app/controllers/api/v1/messages_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:18:in `create'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 4.0ms | Allocations: 1989)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "messages_pkey"
+DETAIL:  Key (id)=(1) already exists.
+):
+  
+app/controllers/api/v1/messages_controller.rb:18:in `create'
+Started GET "/api/v1/messages.json" for ::1 at 2021-10-16 13:28:07 +0200
+Processing by Api::V1::MessagesController#index as JSON
+  Parameters: {"id"=>"7", "greeting"=>"hesi kani", "message"=>{"id"=>"7", "greeting"=>"hesi kani"}}
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 919)
+
+
+Started GET "/api/v1/messages.json" for ::1 at 2021-10-16 13:28:37 +0200
+  
+NoMethodError (undefined method `protect_from_forgery' for Api::V1::MessagesController:Class):
+  
+app/controllers/api/v1/messages_controller.rb:4:in `<class:MessagesController>'
+app/controllers/api/v1/messages_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/messages_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/messages_controller.rb:1:in `<main>'
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 13:29:02 +0200
+  
+NoMethodError (undefined method `protect_from_forgery' for Api::V1::MessagesController:Class):
+  
+app/controllers/api/v1/messages_controller.rb:4:in `<class:MessagesController>'
+app/controllers/api/v1/messages_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/messages_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/messages_controller.rb:1:in `<main>'
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-10-16 13:29:02 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 35)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 13:32:49 +0200
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 4.5ms | Allocations: 3050)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-10-16 13:32:50 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 32)
+
+
+Started GET "/api/v1/messages.json" for ::1 at 2021-10-16 13:33:58 +0200
+Processing by Api::V1::MessagesController#index as JSON
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 898)
+
+
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 13:35:35 +0200
+Processing by Api::V1::MessagesController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 121)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: message
+Did you mean?  controller
+               action):
+  
+app/controllers/api/v1/messages_controller.rb:43:in `message_params'
+app/controllers/api/v1/messages_controller.rb:17:in `create'
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 13:37:40 +0200
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 899)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-10-16 13:37:41 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 13:52:43 +0200
+Processing by Api::V1::MessagesController#create as */*
+Completed 400 Bad Request in 2ms (Allocations: 333)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: message
+Did you mean?  controller
+               action):
+  
+app/controllers/api/v1/messages_controller.rb:47:in `message_params'
+app/controllers/api/v1/messages_controller.rb:17:in `create'
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 13:53:58 +0200
+Processing by Api::V1::MessagesController#create as */*
+Completed 400 Bad Request in 0ms (Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: message
+Did you mean?  controller
+               action):
+  
+app/controllers/api/v1/messages_controller.rb:47:in `message_params'
+app/controllers/api/v1/messages_controller.rb:17:in `create'
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 13:54:53 +0200
+Processing by Api::V1::MessagesController#create as */*
+Completed 400 Bad Request in 0ms (Allocations: 118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: message
+Did you mean?  controller
+               action):
+  
+app/controllers/api/v1/messages_controller.rb:47:in `message_params'
+app/controllers/api/v1/messages_controller.rb:17:in `create'
+Started POST "/api/v1/messages." for ::1 at 2021-10-16 13:57:40 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/messages."):
+  
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 13:57:57 +0200
+Processing by Api::V1::MessagesController#create as */*
+  Parameters: {"greeting"=>"hi lol", "message"=>{"greeting"=>"hi lol"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:18:in `create'
+  [1m[36mMessage Create (6.6ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "hi lol"], ["created_at", "2021-10-16 11:57:57.694914"], ["updated_at", "2021-10-16 11:57:57.694914"]]
+  ↳ app/controllers/api/v1/messages_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:18:in `create'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 14.1ms | Allocations: 3166)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "messages_pkey"
+DETAIL:  Key (id)=(2) already exists.
+):
+  
+app/controllers/api/v1/messages_controller.rb:18:in `create'
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 14:01:46 +0200
+  
+NoMethodError (undefined method `protect_from_forgery' for Api::V1::MessagesController:Class):
+  
+app/controllers/api/v1/messages_controller.rb:5:in `<class:MessagesController>'
+app/controllers/api/v1/messages_controller.rb:4:in `<module:V1>'
+app/controllers/api/v1/messages_controller.rb:3:in `<module:Api>'
+app/controllers/api/v1/messages_controller.rb:2:in `<main>'
+Started POST "/api/v1/messages" for ::1 at 2021-10-16 14:05:06 +0200
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NoMethodError (undefined method `protect_from_forgery' for Api::V1::MessagesController:Class):
+  
+app/controllers/api/v1/messages_controller.rb:5:in `<class:MessagesController>'
+app/controllers/api/v1/messages_controller.rb:4:in `<module:V1>'
+app/controllers/api/v1/messages_controller.rb:3:in `<module:Api>'
+app/controllers/api/v1/messages_controller.rb:2:in `<main>'
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 14:05:48 +0200
+  
+NoMethodError (undefined method `protect_from_forgery' for Api::V1::MessagesController:Class):
+  
+app/controllers/api/v1/messages_controller.rb:5:in `<class:MessagesController>'
+app/controllers/api/v1/messages_controller.rb:4:in `<module:V1>'
+app/controllers/api/v1/messages_controller.rb:3:in `<module:Api>'
+app/controllers/api/v1/messages_controller.rb:2:in `<main>'
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 14:06:14 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (6.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 39ms (Views: 0.2ms | ActiveRecord: 12.8ms | Allocations: 5663)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 14:06:23 +0200
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 922)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-10-16 14:06:23 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 40)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 14:28:41 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 37ms (Views: 0.1ms | ActiveRecord: 8.8ms | Allocations: 4874)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 14:28:44 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 926)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 14:29:24 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 10.4ms | Allocations: 3033)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 14:29:27 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 905)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 14:29:28 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 905)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 14:29:29 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 905)
+
+
+Started GET "/api/v1/messages.json" for ::1 at 2021-10-16 14:37:03 +0200
+Processing by Api::V1::MessagesController#index as JSON
+  Parameters: {"greeting"=>"hi lol", "message"=>{"greeting"=>"hi lol"}}
+  [1m[36mMessage Load (1.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 39ms (Views: 0.1ms | ActiveRecord: 10.1ms | Allocations: 2906)
+
+
+Started GET "/api/v1/messages.json" for ::1 at 2021-10-16 14:40:31 +0200
+Processing by Api::V1::MessagesController#index as JSON
+  Parameters: {"greeting"=>"hi lol", "message"=>{"greeting"=>"hi lol"}}
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 898)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (2.3ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "Hi are you well?"], ["created_at", "2021-10-16 12:44:25.876604"], ["updated_at", "2021-10-16 12:44:25.876604"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (5030.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hello_rails_back_end_development"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (161.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hello_rails_back_end_development"[0m
+  [1m[35m (155.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hello_rails_back_end_test"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hello_rails_back_end_development"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hello_rails_back_end_test"[0m
+  [1m[35m (2199.1ms)[0m  [1m[35mCREATE DATABASE "hello_rails_back_end_development" ENCODING = 'unicode'[0m
+  [1m[35m (1600.5ms)[0m  [1m[35mCREATE DATABASE "hello_rails_back_end_test" ENCODING = 'unicode'[0m
+  [1m[35m (24.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3369180297042482685)[0m
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMessages (20211015223714)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.3ms)[0m  [1m[35mCREATE TABLE "messages" ("id" bigserial primary key, "greeting" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211015223714"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-16 14:09:53.715777"], ["updated_at", "2021-10-16 14:09:53.715777"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3369180297042482685)[0m
+  [1m[35m (13.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (7.6ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "Hi are you well?"], ["created_at", "2021-10-16 14:10:16.876356"], ["updated_at", "2021-10-16 14:10:16.876356"]]
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (0.8ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "We greet you"], ["created_at", "2021-10-16 14:10:16.899521"], ["updated_at", "2021-10-16 14:10:16.899521"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "Nice to have you"], ["created_at", "2021-10-16 14:10:16.907117"], ["updated_at", "2021-10-16 14:10:16.907117"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "Today is great day"], ["created_at", "2021-10-16 14:10:16.914498"], ["updated_at", "2021-10-16 14:10:16.914498"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "Hesi sha"], ["created_at", "2021-10-16 14:10:16.922197"], ["updated_at", "2021-10-16 14:10:16.922197"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "Mhoroi"], ["created_at", "2021-10-16 14:10:16.929626"], ["updated_at", "2021-10-16 14:10:16.929626"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3369180297042482685)[0m
+  [1m[35m (12.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (11.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3369180297042482685)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMessage Load (13.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mMessage Load (1.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 16:42:50 +0200
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 96ms (Views: 0.1ms | ActiveRecord: 5.0ms | Allocations: 5603)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-10-16 16:42:50 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 41)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-16 16:43:06 +0200
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 920)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-10-16 16:43:07 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-17 11:55:54 +0200
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+Completed 204 No Content in 42ms (ActiveRecord: 0.0ms | Allocations: 1854)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-17 11:56:06 +0200
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (2.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 50ms (Views: 0.1ms | ActiveRecord: 15.4ms | Allocations: 3814)
+
+
+Started GET "/api/v1/messages.json" for ::1 at 2021-10-17 11:56:21 +0200
+Processing by Api::V1::MessagesController#index as JSON
+  Parameters: {"greeting"=>"hi lol", "message"=>{"greeting"=>"hi lol"}}
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 918)
+
+
+Started POST "/api/v1/messages.json" for ::1 at 2021-10-17 11:56:32 +0200
+Processing by Api::V1::MessagesController#create as JSON
+  Parameters: {"greeting"=>"hi lol", "message"=>{"greeting"=>"hi lol"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:19:in `create'
+  [1m[36mMessage Create (2.5ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "hi lol"], ["created_at", "2021-10-17 09:56:32.883249"], ["updated_at", "2021-10-17 09:56:32.883249"]]
+  ↳ app/controllers/api/v1/messages_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:19:in `create'
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 10.9ms | Allocations: 1976)
+
+
+  [1m[35m (14.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (14.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (204.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hello_rails_back_end_development"[0m
+  [1m[35m (170.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hello_rails_back_end_test"[0m
+  [1m[35m (3931.9ms)[0m  [1m[35mCREATE DATABASE "hello_rails_back_end_development" ENCODING = 'unicode'[0m
+  [1m[35m (1963.1ms)[0m  [1m[35mCREATE DATABASE "hello_rails_back_end_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "messages" CASCADE[0m
+  [1m[35m (39.5ms)[0m  [1m[35mCREATE TABLE "messages" ("id" bigserial primary key, "greeting" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211015223714)[0m
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-17 16:54:33.872417"], ["updated_at", "2021-10-17 16:54:33.872417"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "4fdf45d30e2547c0f4c6b53cce02083df07c8a83"], ["created_at", "2021-10-17 16:54:33.880286"], ["updated_at", "2021-10-17 16:54:33.880286"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "messages" CASCADE[0m
+  [1m[35m (26.5ms)[0m  [1m[35mCREATE TABLE "messages" ("id" bigserial primary key, "greeting" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211015223714)[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-17 16:54:33.997093"], ["updated_at", "2021-10-17 16:54:33.997093"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-10-17 16:54:34.003848"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "4fdf45d30e2547c0f4c6b53cce02083df07c8a83"], ["created_at", "2021-10-17 16:54:34.008638"], ["updated_at", "2021-10-17 16:54:34.008638"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (14.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (7.7ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "Hi are you well?"], ["created_at", "2021-10-17 16:54:34.242317"], ["updated_at", "2021-10-17 16:54:34.242317"]]
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "We greet you"], ["created_at", "2021-10-17 16:54:34.261794"], ["updated_at", "2021-10-17 16:54:34.261794"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "Nice to have you"], ["created_at", "2021-10-17 16:54:34.265495"], ["updated_at", "2021-10-17 16:54:34.265495"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "Today is great day"], ["created_at", "2021-10-17 16:54:34.269361"], ["updated_at", "2021-10-17 16:54:34.269361"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "Hesi sha"], ["created_at", "2021-10-17 16:54:34.272688"], ["updated_at", "2021-10-17 16:54:34.272688"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("greeting", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["greeting", "Mhoroi"], ["created_at", "2021-10-17 16:54:34.276329"], ["updated_at", "2021-10-17 16:54:34.276329"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3369180297042482685)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (7.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3369180297042482685)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-10-17 19:02:52 +0200
+  [1m[35m (14.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+Completed 204 No Content in 63ms (ActiveRecord: 0.0ms | Allocations: 1854)
+
+
+Started GET "/" for ::1 at 2021-10-17 19:03:13 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/api/v1/messages.json" for ::1 at 2021-10-17 19:03:32 +0200
+Processing by Api::V1::MessagesController#index as JSON
+  [1m[36mMessage Load (17.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 90ms (Views: 0.2ms | ActiveRecord: 54.7ms | Allocations: 3831)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-10-17 19:03:33 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 27)
+
+

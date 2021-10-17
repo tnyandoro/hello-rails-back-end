@@ -3,28 +3,22 @@
 #
 messages = Message.create([
     {
-      id: 1,
-      greeting: 'Howzit buddy'
+      greeting: 'Hi are you well?'
     },
    {
-      id: 2,
-      greeting: 'Titambire'
+      greeting: 'We greet you'
     },
     {
-      id: 3,
-      greeting: 'Share a smile today will be a great day'
+      greeting: 'Nice to have you'
     },
     {
-      id: 4,
       greeting: 'Today is great day'
     },
     {
-      id: 5,
-      greeting: 'You are looking great to day friend'
+      greeting: 'Hesi sha'
     },
     {
-      id: 6,
-      greeting: 'Hey hows your day'
+      greeting: 'Mhoroi'
     }
   ])
   

@@ -1,13 +1,16 @@
+# app/controllers/api/v1/messages_controller.rb
 module Api
     module V1
         class MessagesController < ApplicationController
+            # protect_from_forgery with: :null_session
+
             def index 
                 messages = Message.all
                 render json: MessageSerializer.new(messages).serialized_json
             end
 
             def show
-                message = Message.find(params[:id])
+                message = Message.find(id: params[:id]) || Message.random
                 render json: MessageSerializer.new(message).serialized_json
             end
 
@@ -16,7 +19,7 @@ module Api
                 if message.save
                     render json: MessageSerializer.new(message).serialized_json
                 else
-                    render json: {errors: message.errors.full_messages}, status: 422
+                    render json: { error: message.errors.messages }, status: 422
                 end
             end
 
@@ -25,14 +28,18 @@ module Api
                 if message.update(message_params)
                     render json: MessageSerializer.new(message).serialized_json
                 else
-                    render json: {errors: message.errors.full_messages}, status: 422
+                    render json: { error: message.errors.messages }, status: 422
                 end
             end
 
             def destroy
                 message = Message.find(params[:id])
-                message.destroy
-                render json: {message: "Message deleted"}
+
+                if message.destroy
+                    head :no_content, status: :ok
+                else
+                    render json: { error: message.errors.messages }, status: 422
+                end
             end
 
             private

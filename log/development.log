@@ -805,3 +805,295 @@ Processing by PagesController#index as */*
 Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 27)
 
 
+Started GET "/" for ::1 at 2021-10-18 09:21:50 +0200
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+Completed 204 No Content in 60ms (ActiveRecord: 0.0ms | Allocations: 1855)
+
+
+Started GET "/" for ::1 at 2021-10-18 09:22:14 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/" for ::1 at 2021-10-18 09:22:20 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/" for ::1 at 2021-10-18 09:24:48 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/" for ::1 at 2021-10-18 09:26:34 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/" for ::1 at 2021-10-18 09:26:52 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-18 09:30:05 +0200
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+Completed 204 No Content in 11ms (ActiveRecord: 0.0ms | Allocations: 1854)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 09:30:17 +0200
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (4.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 109ms (Views: 0.2ms | ActiveRecord: 12.2ms | Allocations: 3869)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-10-18 09:30:18 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 09:33:13 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 924)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 09:33:51 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 903)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 09:33:57 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (2.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 903)
+
+
+Started GET "/api/v1/messages.json" for 127.0.0.1 at 2021-10-18 09:34:57 +0200
+Processing by Api::V1::MessagesController#index as JSON
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 914)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 09:36:03 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 924)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 09:38:17 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (11.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 39ms (Views: 0.3ms | ActiveRecord: 11.1ms | Allocations: 903)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-18 09:45:02 +0200
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+Completed 204 No Content in 20ms (ActiveRecord: 0.0ms | Allocations: 1855)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 09:45:09 +0200
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 29ms (Views: 0.4ms | ActiveRecord: 10.9ms | Allocations: 3816)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-10-18 09:45:09 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 09:45:48 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (1.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 925)
+
+
+Started GET "/api/v1/messages.json" for 127.0.0.1 at 2021-10-18 09:47:30 +0200
+Processing by Api::V1::MessagesController#index as JSON
+  [1m[36mMessage Load (1.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 1.3ms | ActiveRecord: 1.6ms | Allocations: 897)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 09:52:43 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (2.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 2.9ms | Allocations: 904)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 09:55:41 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 921)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 10:07:08 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (2.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 65ms (Views: 0.2ms | ActiveRecord: 17.6ms | Allocations: 2933)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 10:07:16 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 904)
+
+
+Started GET "/" for ::1 at 2021-10-18 10:17:37 +0200
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms | Allocations: 1855)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-18 10:18:06 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 10:18:15 +0200
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:7:in `index'
+Completed 200 OK in 20ms (Views: 12.4ms | ActiveRecord: 5.4ms | Allocations: 3822)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-10-18 10:18:15 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 27)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 10:18:35 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.6ms | Allocations: 1080)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 10:21:03 +0200
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.6ms | Allocations: 1054)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-10-18 10:21:04 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 10:30:40 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (1.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:7:in `index'
+Completed 200 OK in 61ms (Views: 60.9ms | ActiveRecord: 15.0ms | Allocations: 3067)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 10:30:57 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.8ms | Allocations: 1080)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 11:14:59 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:7:in `index'
+Completed 200 OK in 55ms (Views: 54.5ms | ActiveRecord: 15.0ms | Allocations: 3105)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 11:19:45 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:7:in `index'
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.8ms | Allocations: 1059)
+
+
+Started GET "/" for ::1 at 2021-10-18 14:11:03 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-10-18 14:13:23 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 26)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 14:15:20 +0200
+Started GET "/api/v1/messages" for ::1 at 2021-10-18 14:15:20 +0200
+  [1m[35m (20.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MessagesController#index as HTML
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (26.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:7:in `index'
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:7:in `index'
+Completed 200 OK in 266ms (Views: 17.3ms | ActiveRecord: 82.4ms | Allocations: 8258)
+
+
+Completed 200 OK in 102ms (Views: 29.5ms | ActiveRecord: 71.8ms | Allocations: 6538)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-10-18 14:15:22 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 41)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 14:15:52 +0200
+Processing by Api::V1::MessagesController#index as */*
+  [1m[36mMessage Load (1.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.2ms | Allocations: 1080)
+
+
+Started GET "/" for ::1 at 2021-10-18 14:16:20 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/" for ::1 at 2021-10-18 14:16:51 +0200
+Processing by PagesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-18 14:36:46 +0200
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+Completed 204 No Content in 11ms (ActiveRecord: 0.0ms | Allocations: 1856)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2021-10-18 14:36:53 +0200
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (3.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:7:in `index'
+Completed 200 OK in 42ms (Views: 13.3ms | ActiveRecord: 10.0ms | Allocations: 3822)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-10-18 14:36:54 +0200
+Processing by PagesController#index as */*
+  Parameters: {"path"=>"favicon"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
